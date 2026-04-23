@@ -1,0 +1,128 @@
+/* Header Styles */
+header.bg-gradient {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%) !important;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header h2 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+header .header-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 600;
+    color: white !important;
+    text-decoration: none;
+}
+
+header .header-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+header .header-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+header .header-link:hover::before {
+    width: 100%;
+}
+
+header i {
+    display: inline-block;
+    vertical-align: -0.125em;
+    transition: transform 0.3s ease;
+}
+
+header .header-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 0 !important;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    header nav ul {
+        gap: 8px !important;
+    }
+
+    header .header-link {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    header .header-link i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    header h2 {
+        font-size: 16px;
+    }
+
+    .header-icon {
+        display: none;
+    }
+
+    header .header-link span {
+        display: none;
+    }
+
+    header .header-link {
+        padding: 8px;
+    }
+}

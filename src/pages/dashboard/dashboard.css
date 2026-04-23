@@ -1,0 +1,214 @@
+/* Dashboard Header */
+.dashboard-header {
+    text-align: center;
+    padding: 40px 0 20px;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0.02) 100%);
+    border-radius: 12px;
+    animation: slideIn 0.5s ease;
+}
+
+.dashboard-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0d6efd;
+    letter-spacing: -0.5px;
+}
+
+.dashboard-header p {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* Weather Cards - Main Metrics */
+.weather-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.weather-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: #0d6efd;
+}
+
+.main-metric {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+}
+
+.metric-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temp-icon {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.1) 0%, rgba(220, 53, 69, 0.05) 100%);
+    color: #dc3545;
+}
+
+.humidity-icon {
+    background: linear-gradient(135deg, rgba(23, 162, 184, 0.1) 0%, rgba(23, 162, 184, 0.05) 100%);
+    color: #17a2b8;
+}
+
+.wind-icon {
+    background: linear-gradient(135deg, rgba(111, 66, 193, 0.1) 0%, rgba(111, 66, 193, 0.05) 100%);
+    color: #6f42c1;
+}
+
+.pressure-icon {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);
+    color: #ffc107;
+}
+
+.metric-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 8px;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Detailed Cards */
+.detailed-card {
+    overflow: hidden;
+}
+
+.card-header-custom {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 2px solid #e9ecef;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.02) 0%, rgba(13, 110, 253, 0.01) 100%);
+}
+
+.card-header-custom i {
+    font-size: 24px;
+    color: #0d6efd;
+}
+
+.card-header-custom h5 {
+    margin: 0;
+    font-weight: 700;
+    color: #0d6efd;
+    font-size: 18px;
+}
+
+.detailed-card .card-body {
+    padding: 24px;
+}
+
+.detailed-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #495057;
+}
+
+.detailed-card strong {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+/* Chart Placeholder */
+.chart-placeholder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 200px;
+    padding: 24px;
+    gap: 8px;
+}
+
+.chart-bar {
+    width: 8%;
+    background: linear-gradient(180deg, #0d6efd 0%, #0b5ed7 100%);
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.2);
+}
+
+.chart-bar:hover {
+    background: linear-gradient(180deg, #0b5ed7 0%, #0a58ca 100%);
+    transform: scaleY(1.05);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .dashboard-header h1 {
+        font-size: 28px;
+    }
+
+    .main-metric {
+        padding: 24px 16px;
+    }
+
+    .metric-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 36px;
+    }
+
+    .metric-value {
+        font-size: 28px;
+    }
+
+    .chart-bar {
+        width: 10%;
+    }
+
+    .card-header-custom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .card-header-custom i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-header {
+        padding: 24px 16px;
+    }
+
+    .weather-card {
+        padding: 16px;
+    }
+
+    .metric-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+    }
+
+    .metric-value {
+        font-size: 24px;
+    }
+
+    .chart-placeholder {
+        height: 150px;
+        padding: 16px;
+    }
+}

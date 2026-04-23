@@ -3,19 +3,19 @@
     object-fit: cover;
 }
 
-/* Login Card */
-.login-card {
+/* Register Card */
+.register-card {
     animation: slideIn 0.5s ease;
 }
 
-.login-card .card {
+.register-card .card {
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.login-card img {
+.register-card img {
     height: 100%;
     object-fit: cover;
 }
@@ -47,7 +47,7 @@ h2 {
 }
 
 /* Botão */
-.btn-primary {
+button[type="submit"] {
     border-radius: 8px;
     padding: 12px 24px;
     font-weight: 600;
@@ -56,7 +56,7 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
+button[type="submit"]:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
 }

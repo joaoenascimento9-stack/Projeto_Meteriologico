@@ -109,3 +109,178 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* Botões */
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0b5ed7 0%, #0a58ca 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #5c636a 100%);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* Inputs */
+.form-control, .form-select {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.form-floating > label {
+  color: var(--text);
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.weather-card {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(108, 117, 125, 0.05) 100%);
+  border: 1px solid var(--border);
+}
+
+/* Link */
+a {
+  transition: color 0.3s ease;
+}
+
+a.link-secondary:hover {
+  color: #0d6efd !important;
+}
+
+/* Animações */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: slideIn 0.5s ease;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header a {
+  position: relative;
+  font-weight: 600;
+}
+
+header a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+/* Icons */
+.bi {
+  display: inline-block;
+  vertical-align: -0.125em;
+}
+
+/* Badges */
+.badge {
+  padding: 8px 12px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* Success message */
+.alert {
+  border-radius: 8px;
+  border: none;
+  animation: slideIn 0.3s ease;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, rgba(25, 135, 84, 0.1) 0%, rgba(25, 135, 84, 0.05) 100%);
+  color: #15803d;
+  border-left: 4px solid #198754;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.1) 0%, rgba(220, 53, 69, 0.05) 100%);
+  color: #991b1b;
+  border-left: 4px solid #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn {
+    padding: 12px !important;
+    font-size: 14px;
+  }
+  
+  .card {
+    margin-bottom: 16px;
+  }
+}
